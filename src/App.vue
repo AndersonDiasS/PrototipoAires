@@ -1,26 +1,64 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <main class="">
+    <div class="background"></div>
+    <div class="">
+   
+      <img src="./assets/IMG/Logo.svg" class="Logo__img" />
+     
+      <router-view v-slot="{ Component }">
+        <transition name="route" mode="out-in">
+          <component :is="Component"></component>
+        </transition>
+      </router-view>
+    </div>
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+ 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+ 
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import "./assets/CSS/global.css";
+
+main {
+  display: flex;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+main div img {
+  margin-top: 50px;
+}
+.background {
+  background-image: url("assets/IMG/MainBackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 900px;
+  height: 99.7vh;
+}
+
+.Logo__img {
+  width: 94px;
+}
+
+/* CSS para animação out-in */
+
+.route-enter-from {
+  opacity: 0;
+  transform: translateX(100px);
+}
+.route-enter-active {
+  transition: all 0.3s ease-out;
+}
+.route-leave-to {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+.route-leave-active {
+  transition: all 0.3s ease-in;
 }
 </style>

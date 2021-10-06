@@ -1,0 +1,88 @@
+@import url("https://use.typekit.net/xgt6cao.css")
+$font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-40)/48px var(--unnamed-font-family-usual)
+$font__normal: normal normal normal 14px/17px Usual
+$primaryColor: #0a50d7
+
+body
+    margin: 0
+    font: $font
+
+main
+    border: 1px solid #ddd
+
+h1
+    font: normal normal bold 40px/48px Usual
+
+h2
+    font: normal normal normal 16px/19px Usual
+    color: #AFB8C0
+    letter-spacing: 1.42px
+
+label, p, a
+    font: $font__normal
+    font-weight: bold
+
+a
+    color: $primaryColor
+    text-decoration: none
+
+.form
+    display: flex
+    flex-wrap: wrap
+    width: 50%
+    margin: 0 auto 50px
+
+.form__div
+    width: 100%
+    padding: 15px
+
+.form__input
+    width: 100%
+    background: #ffffff 0% 0% no-repeat padding-box
+    box-shadow: 0px 0px 12px #00000029
+    border-radius: 5px
+    height: 46px
+    border: 1px solid #ddd
+    margin-top: 8px
+
+input::placeholder
+    color: #AFB8C0
+    padding: 10px
+
+.form__checkbox
+    width: 26px
+    height: 26px
+    background: $primaryColor
+
+.form__div__text
+    align-items: center
+    display: flex
+
+.form__div__button
+    background: transparent linear-gradient(90deg, #0046F5 0%, #0034B7 100%) 0% 0% no-repeat padding-box
+    width: 100%
+    color: #FFFFFF
+    padding: 15px
+    border: none
+    border-radius: 12px
+    color: #ffffffcf
+    font-weight: 600
+
+.bottom__content
+    display: flex
+    justify-content: space-between
+    font-weight: bold
+
+.initial__align
+    text-align: initial
+
+.space-between
+    justify-content: space-between
+
+@media (max-width: 1030px)
+    .background
+        display: none
+
+@media (max-width: 500px)
+    .form
+        width: 100%
